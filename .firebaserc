@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "gacxep-bookstore": {
+      "hosting": {
+        "BookManagement": [
+          "gacxep-bookstore"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "gacxep-bookstore"
+  }
+}

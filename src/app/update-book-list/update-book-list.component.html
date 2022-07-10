@@ -1,0 +1,50 @@
+<div *ngFor="let books of books1">
+    <div *ngIf="editState && booksToEdit.id== books.id">
+        <form [formGroup]="formUpdate">
+            <table class="update-form">
+                <h2>UPDATE</h2>
+                <div class="bookname">
+                    <label for="bookname">Book Name</label><br>
+                    <input type="text" name="bookname" size="25" formControlName="bookname" placeholder=""
+                        [(ngModel)]="books.bookname"><br>
+                </div>
+                <div class="author">
+                    <label for="author">Author</label><br>
+                    <input type="text" name="author" size="25" formControlName="author" placeholder=""
+                        [(ngModel)]="books.author"><br>
+                </div>
+                <div class="price">
+                    <label for="price">Price</label><br>
+                    <input type="text" name="price" size="25" formControlName="price" placeholder=""
+                        [(ngModel)]="books.price"><br>
+                </div>
+                <div class="description">
+                    <label for="description">Description</label><br>
+                    <input type="text" name="description" size="53" formControlName="description" placeholder=""
+                        [(ngModel)]="books.description"><br>
+                </div>
+                <div class="publisher">
+                    <label for="publisher">Publisher</label><br>
+                    <select name="" id="" formControlName="publisher" placeholder="" [(ngModel)]="books.publisher">
+                        <option value="nxbtre">NXB Trẻ</option>
+                        <option value="nxbkimdong">NXB Kim Đồng</option>
+                    </select><br>
+                </div>
+                <div class="category">
+                    <label for="category">Category</label><br>
+                    <input type="text" name="category" size="25" formControlName="category" placeholder=""
+                        [(ngModel)]="books.category"><br>
+                </div>
+                <div class="status">
+                    <label for="status">Status</label><br>
+                    <input type="text" name="catstatusegory" size="25" formControlName="status" placeholder=""
+                        [(ngModel)]="books.status"><br>
+                </div>
+                <div>
+                    <button type="submit" (click)="update(formUpdate.value)">Update</button>
+                    <button> <a class="" (click)="back()">Back</a></button>
+                </div>
+            </table>
+        </form>
+    </div>
+</div>

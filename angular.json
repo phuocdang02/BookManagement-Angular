@@ -94,6 +94,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "BookManagement:build:production",
+            "firebaseProject": "gacxep-bookstore",
+            "firebaseHostingSite": "gacxep-bookstore"
+          }
         }
       }
     }

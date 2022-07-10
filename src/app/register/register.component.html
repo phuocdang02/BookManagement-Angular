@@ -1,0 +1,36 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <h1>Register</h1>
+        <div class="header">
+            <p class="header-register">BOOK MANAGEMENT</p>
+        </div>
+        <hr>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email" required formControlName="email">
+        <div
+            *ngIf="registerForm.controls['email'].invalid && (registerForm.controls['email'].dirty ||registerForm.controls['email'].touched)">
+            <small *ngIf="registerForm.controls['email'].hasError('required')" class="text-danger">E-Mail
+                is
+                required.</small>
+        </div>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required formControlName="password">
+        <div
+            *ngIf="registerForm.controls['password'].invalid && (registerForm.controls['password'].dirty ||registerForm.controls['password'].touched)">
+            <small *ngIf="registerForm.controls['password'].hasError('required')" class="text-danger">Password
+                is
+                required.</small>
+        </div>
+        <hr>
+        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+        <button [disabled]="!registerForm.valid" (ngSubmit)="onSubmit()" type="submit"
+            class="registerbtn">Register</button>
+    </div>
+
+    <div class="container signin">
+        <p>Already have an account? <a href="admin">Sign in</a>.</p>
+    </div>
+</form>

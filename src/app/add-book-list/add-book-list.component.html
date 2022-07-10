@@ -1,0 +1,76 @@
+<form [formGroup]="formAddBookList">
+    <div class="main-input">
+        <img class="img-form-input"
+            src="https://images.unsplash.com/photo-1595860041826-de0b53177bcd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80">
+        <div class="form-input">
+            <h2 class="title">Form Input Book</h2>
+            <div class="">
+                <div class="bookname pdt10px">
+                    <label for="bookname">Book Name </label><br>
+                    <input type="text" class="size-input size-name" id="bookname" formControlName="bookname" /><br/>
+                    <div
+                        *ngIf="formAddBookList.controls['bookname'].invalid &&(formAddBookList.controls['bookname'].dirty ||formAddBookList.controls['bookname'].touched)">
+                        <small *ngIf="formAddBookList.controls['bookname'].hasError('required')"
+                            class="text-danger">Book
+                            name is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="author pdt10px">
+                    <label for="author">Author </label><br />
+                    <input type="text" class="size-input size-name" id="author" formControlName="author" /><br />
+                    <div
+                        *ngIf="formAddBookList.controls['author'].invalid &&(formAddBookList.controls['author'].dirty ||formAddBookList.controls['author'].touched)">
+                        <small *ngIf="formAddBookList.controls['author'].hasError('required')"
+                            class="text-danger">Author
+                            is required.</small>
+                    </div>
+                </div>
+            </div>
+            <div class="publisher pdt10px">
+                <label for="publisher">Publisher </label><br />
+                <select form="text" formControlName="publisher">
+                    <option value="nxbtre">NXB Trẻ</option>
+                    <option value="nxbkimdong">NXB Kim Đồng</option>
+                </select>
+            </div>
+            <div class="price pdt10px">
+                <label for="price">Price</label><br />
+                <input type="text" class="size-input size-name" formControlName="price" /><br />
+                <div
+                    *ngIf="formAddBookList.controls['price'].invalid &&(formAddBookList.controls['price'].dirty ||formAddBookList.controls['price'].touched)">
+                    <small *ngIf="formAddBookList.controls['price'].hasError('required')" class="text-danger">Price is
+                        required.</small>
+                </div>
+            </div>
+            <div class="category pdt10px">
+                <label for="category">Category</label><br />
+                <input type="text" class="size-input size-name" formControlName="category" /><br />
+                <div
+                    *ngIf="formAddBookList.controls['category'].invalid &&(formAddBookList.controls['category'].dirty ||formAddBookList.controls['category'].touched)">
+                    <small *ngIf="formAddBookList.controls['category'].hasError('required')"
+                        class="text-danger">Category
+                        is required.</small>
+                </div>
+            </div>
+            <br />
+            <div class="status">
+                <label for="status">Status</label><br />
+                <input type="checkbox" class="checkbox" name="status" formControlName="status" />
+            </div>
+            <div></div>
+            <div class="description pdt10px">
+                <label for="description">Description </label><br />
+                <input type="text" class="size-input size-name" formControlName="description" /><br />
+            </div>
+
+            <div class="btn-form-add">
+                <button type="submit" class="button btn-add" [disabled]="!formAddBookList.valid"
+                    (click)="add(formAddBookList.value)">
+                    Add
+                </button>
+                <button class="button btn-back" (click)="back()">Back</button>
+            </div>
+        </div>
+    </div>
+</form>

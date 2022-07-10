@@ -1,0 +1,105 @@
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .img-login{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-attachment: fixed;
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+    }
+
+    .main{
+        font-size: 1.8em;
+    }
+
+    .main-login{    
+        position: relative;
+        width: 500px;
+        height: 500px;
+        align-items: center;
+        padding-top: 10%;
+        margin-left: 37%;
+    }
+
+    .tittle{
+        font-size:2.5em;
+    }
+
+    .login-title{
+        text-align: center;
+        font-size: 60px !important;
+        color: #ccc;
+        font-weight: 800;
+        padding-bottom: 30px;
+
+    }
+
+    button {
+        background-color: black;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+
+    .container {
+        display: flex;
+        float: left;
+        width: 100%;
+    }
+
+    .container-btn{
+        padding: 0 20px;
+        font-size: 1.8em;
+
+
+    }
+
+    .form-control{
+        border-radius: 5px;
+    }
+
+    .btn{
+        border-radius: 50px  ;
+        width: 195px;
+        height: 80px;
+        font-size: 15px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+
+    .form-group{
+        color: #ccc;
+    }
+
+    .form-login{
+        
+    }
+
+    .size-L{
+        width: 455px;
+    }
+
+    .container-enter{
+        padding-left: 10px;
+
+    }

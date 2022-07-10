@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<div class="main">
+    <img class="img-login"
+        src="https://images.unsplash.com/photo-1579370318443-8da816457e3d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        alt="">
+    <div class="main-login">
+        <h1 class="login-title">BOOK MANAGEMENT</h1>
+        <div class="form-login">
+            <div class="form-group">
+                <label for="email">EMAIL</label>
+                <input type="text" class="form-control" from aria-describedby="UserNameHelp"
+                    placeholder="Enter your registered Email here" formControlName="email">
+            </div>
+            <div class="form-group">
+                <label for="psw">PASSWORD</label>
+                <input type="password" class="form-control" from aria-describedby="UserNameHelp"
+                    placeholder="Enter your Password" formControlName="password">
+            </div>
+        </div>
+        <div class="container-enter">
+            <div class="container-btn ">
+                <button type="button" class="btn size-L" (click)="loginByEmail()">Login</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container-btn">
+                <button type="submit" class="btn fas fa-sign-in-alt" (click)="register()">Sign Up</button>
+            </div>
+            <div class="container-btn">
+                <button type="button" class="btn fab fa-google" (click)="loginByGoogle()">Login with Google</button>
+            </div>
+        </div>
+    </div>
+</div>
