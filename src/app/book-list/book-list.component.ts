@@ -14,7 +14,7 @@ export class BookListComponent implements OnInit {
   private bookCollection:AngularFirestoreCollection<BookDescription>;
 
   config: any;
-  books1: BookDescription[]=[]
+  books1: BookDescription[]=[];
   searchName!:string;
   formSearch!:FormGroup;
   Search!:FormControl;
@@ -72,7 +72,7 @@ export class BookListComponent implements OnInit {
     }
   }
 
-  /* update(data:{
+  update(data:{
     id: string;
     bookname: string;
     author: string;
@@ -95,30 +95,30 @@ export class BookListComponent implements OnInit {
 
     this.bookCollection.doc(id).update(inputData);
     this.clearState();
-  } */
+  }
 
-  delete(event:any, books1:BookDescription){
+  delete(books1:BookDescription){
     this.userService.deleteBook(books1);
     alert('Deleted');
   }
 
-  /* edit(book: BookDescription){
+  edit(book: BookDescription){
     this.editState = true;
     this.booksToEdit = book;
-  } */
-
-  edit(){
-    this.router.navigate(["/admin/update-book-list"])
   }
+
+  /* edit(){
+    this.router.navigate(["/admin/update-book-list"])
+  } */
 
   add(){
     this.router.navigate(["/admin/add-book-list"]);
   }
 
-  /* back(){
+  back(){
     this.clearState();
     this.router.navigate(["/admin"]);
-  } */
+  }
 
   clearState() {
     this.editState = false;

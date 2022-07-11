@@ -7,11 +7,22 @@ body {
     box-sizing: border-box;
   }
   
+  .img-login{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
   /* Add padding to containers */
   .container {
+    position: relative;
     padding: 16px;
-    background-color: white;
+    background-color: #fff;
   }
+
   
   /* Full-width input fields */
   input[type=text], input[type=password] {

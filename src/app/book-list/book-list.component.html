@@ -45,16 +45,16 @@
                     <td>{{ books.status }}</td>
                     <td class="btn">
                         <div class="btn-edit">
-                            <!-- <button class="btn-edit-style btn-style" (click)="edit(books)">Edit</button> -->
-                            <button class="btn-edit-style btn-style" (click)="edit()">Edit</button>
+                            <button class="btn-edit-style btn-style" (click)="edit(books)">Edit</button>
+                            <!-- <button class="btn-edit-style btn-style" (click)="edit()">Edit</button> -->
                         </div>
                         <div class="btn-detele">
-                            <button class="btn-delete-style btn-style" (click)="delete($event,books)">Delete</button>
+                            <button class="btn-delete-style btn-style" (click)="delete(books)">Delete</button>
                         </div>
                     </td>
                 </tr>
 
-                <!-- <div *ngIf="editState && booksToEdit.id== books.id">
+                <div *ngIf="editState && booksToEdit.id== books.id">
                     <form [formGroup]="formUpdate">
                         <table class="update-form">
                             <h2>UPDATE</h2>
@@ -73,11 +73,6 @@
                                 <input type="text" name="price" size="25" formControlName="price" placeholder=""
                                     [(ngModel)]="books.price"><br>
                             </div>
-                            <div class="description">
-                                <label for="description">Description</label><br>
-                                <input type="text" name="description" size="53" formControlName="description"
-                                    placeholder="" [(ngModel)]="books.description"><br>
-                            </div>
                             <div class="publisher">
                                 <label for="publisher">Publisher</label><br>
                                 <select name="" id="" formControlName="publisher" placeholder=""
@@ -89,12 +84,17 @@
                             <div class="category">
                                 <label for="category">Category</label><br>
                                 <input type="text" name="category" size="25" formControlName="category" placeholder=""
-                                [(ngModel)]="books.category"><br>
+                                    [(ngModel)]="books.category"><br>
                             </div>
                             <div class="status">
                                 <label for="status">Status</label><br>
-                                <input type="text" name="catstatusegory" size="25" formControlName="status" placeholder=""
-                                [(ngModel)]="books.status"><br>
+                                <input type="text" name="catstatusegory" size="25" formControlName="status"
+                                    placeholder="" [(ngModel)]="books.status"><br>
+                            </div>
+                            <div class="description">
+                                <label for="description">Description</label><br>
+                                <input type="text" name="description" size="53" formControlName="description"
+                                    placeholder="" [(ngModel)]="books.description"><br>
                             </div>
                             <div>
                                 <button type="submit" (click)="update(formUpdate.value)">Update</button>
@@ -102,7 +102,7 @@
                             </div>
                         </table>
                     </form>
-                </div> -->
+                </div>
             </tbody>
             <button class="nav-item" (click)="add()">
                 <a class="nav-link">

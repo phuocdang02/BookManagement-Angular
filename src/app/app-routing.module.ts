@@ -6,7 +6,6 @@ import { AuthGuard } from './guard/auth.guard';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { RegisterComponent } from './register/register.component';
-import { UpdateBookListComponent } from './update-book-list/update-book-list.component';
 
 const routes: Routes = [
   {
@@ -16,7 +15,6 @@ const routes: Routes = [
     children:[
       {path:"",component:BookListComponent},
       {path:"add-book-list",component:AddBookListComponent},
-      {path:"update-book-list", component:UpdateBookListComponent}
     ]
   },
   {path:'register', component:RegisterComponent},

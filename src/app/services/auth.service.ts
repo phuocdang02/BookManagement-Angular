@@ -33,8 +33,8 @@ export class AuthService {
     })
   }
 
-  signInEmail(email: string, password: string){
-    return new Promise<any>((resolve,reject)=>{
+  async signInEmail(email: string, password: string){
+    return await new Promise<any>((resolve,reject)=>{
       this.angularfireAuth.signInWithEmailAndPassword(email,password).then(res=>{
         resolve(res);
       },

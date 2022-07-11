@@ -38,6 +38,7 @@ export class RegisterComponent implements OnInit {
   onSubmit(){
     this.authService.signUp(this.email.value, this.password.value).then(res =>{
       console.log(res)
+      this.router.navigateByUrl("/admin")
     });
     this.router.navigateByUrl("/admin")
   }

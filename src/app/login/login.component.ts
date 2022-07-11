@@ -10,24 +10,24 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent implements OnInit {
   signInForm: FormGroup;
-  email:FormControl;
-  password:FormControl;
+  // email:FormControl;
+  // password:FormControl;
 
   constructor(
     public authService: AuthService,
     private router: Router,
     builder: FormBuilder
   ) { 
-    this.email = new FormControl('',[Validators.required]);
-    this.password = new FormControl('',[Validators.required]);
+  //  this.email = new FormControl('',[Validators.required]);
+   // this.password = new FormControl('',[Validators.required]);
     this.signInForm = new FormGroup({
       email: new FormControl('',[Validators.required]),
       password: new FormControl('',[Validators.required]),
     })
-    this.signInForm = builder.group({
-      email: this.email,
-      password: this.password,
-    });
+    // this.signInForm = builder.group({
+    //   email: this.email,
+    //   password: this.password,
+    // });
   }
 
   ngOnInit(): void {
@@ -42,11 +42,13 @@ export class LoginComponent implements OnInit {
   }
 
   loginByEmail(){
-    this.authService.signInEmail(this.email.value, this.password.value).then(res => {
-      this.router.navigate(["/admin"]);
-    }).catch(err => {
-      alert('Failed!!!, Please check your email or password');
-    })
+    alert(this.signInForm.controls['email'].value)
+    // console.log(this.email.value,this.password.value)
+    // this.authService.signInEmail(this.email.value, this.password.value).then(res => {
+    //   this.router.navigate(["/admin"]);
+    // }).catch(err => {
+    //   alert('Failed!!!, Please check your email or password');
+    // })
   }
 
   register(){

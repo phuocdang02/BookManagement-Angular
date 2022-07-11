@@ -23,7 +23,6 @@ import { RegisterComponent } from './register/register.component';
 import { MainComponent } from './main/main.component';
 import { NavComponent } from './nav/nav.component';
 import { AddBookListComponent } from './add-book-list/add-book-list.component';
-import { UpdateBookListComponent } from './update-book-list/update-book-list.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,6 @@ import { UpdateBookListComponent } from './update-book-list/update-book-list.com
     NavComponent,
     AddBookListComponent,
     MainComponent,
-    UpdateBookListComponent,
   ],
   imports: [
     BrowserModule,

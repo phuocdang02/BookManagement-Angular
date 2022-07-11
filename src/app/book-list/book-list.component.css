@@ -58,10 +58,6 @@
   height: 50px;
 }
 
-.nav-link {
-  /* padding: 25px 25px; */
-}
-
 .table {
   /* display: flex; */
   /* flex-wrap: wrap; */
@@ -73,6 +69,10 @@
   border-top: none !important;
 }
 
+.update-form{
+  border: solid;
+}
+
 .status,
 .bookname,
 .author,
@@ -80,10 +80,9 @@
 .description,
 .category,
 .publisher {
-  height: 50px;
-  background-color: aquamarine;
+  /* height: 50px; */
+  background-color: #fff;
   margin: 5px;
-  border-style: solid;
   padding-top: 10px;
   padding-left: 10px;
 }
